@@ -40,7 +40,7 @@ data = data.withColumn("Avg Area House Age",
 
 println(data.printSchema())
 println(data.show(5))
-println("Rows Present now are: ", data.count())
+println(s"Rows Present now are: ${data.count()}")
 
 
 /*
