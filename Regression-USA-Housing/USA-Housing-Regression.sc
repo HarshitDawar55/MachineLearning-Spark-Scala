@@ -52,7 +52,7 @@ println(data.printSchema())
 println(data.show(5))
 println(s"Rows Present now are: ${data.count()}")
 
-
+//////////////////////////////////////////////////////////////////////////////
 // Selecting the required features
 val features = data.drop("Price")
 
@@ -63,6 +63,7 @@ println(features.columns.mkString("Array(", ", ", ")"))
 val labels = data.select("Price")
 println(labels.show(5))
 
+//////////////////////////////////////////////////////////////////////////////
 // Converting the features into Vector for Processing
 val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("Features")
 
