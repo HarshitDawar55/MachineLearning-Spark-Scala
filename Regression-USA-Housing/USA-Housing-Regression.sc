@@ -10,4 +10,8 @@ val spark = SparkSession.builder().config("spark.master", "local").getOrCreate()
 // Loaded the Data
 val data = spark.read.option("header", "true").option("inferSchema", "true").format("csv").load("file:////Users/harshitdawar/Github/Classic/MachineLearningWithSpark&Scala/src/main/scala/Datasets/USA_Housing.csv")
 
+// Printing the Schema of the Project
 println(data.printSchema())
+
+// Printing the Top 5 Rows!
+println(data.show(5))
