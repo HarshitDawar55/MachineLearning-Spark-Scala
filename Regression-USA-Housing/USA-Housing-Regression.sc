@@ -34,6 +34,7 @@ println(data.show(5))
 
 
 //////////////////////////////////////////////////////////////////////////////
+// Removing the String Datatype of the columns which are not required!
 data = data.withColumn("Avg Area House Age",
   data("Avg Area House Age").cast(DoubleType)).withColumn("Avg Area Income",
   data("Avg Area Income").cast(DoubleType))
