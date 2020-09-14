@@ -23,7 +23,6 @@ def main(): Unit = {
   trainingSummary.residuals.show()
   println(s"RMSE: ${trainingSummary.rootMeanSquaredError}")
   println(s"r2: ${trainingSummary.r2}")
-
-
 }
+
 main()
