@@ -3,6 +3,7 @@
 import org.apache.spark.sql.SparkSession
 import org.apache.log4j._
 import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.sql.types.DoubleType
 
 Logger.getLogger("org").setLevel(Level.ERROR)
 
@@ -20,6 +21,8 @@ println(data.printSchema())
 // Printing the Top 5 Rows!
 println(data.show(5))
 
+
+//////////////////////////////////////////////////////////////////////////////
 // Removing all the Null Values from the Dataset!
 data = data.na.drop()
 
@@ -29,6 +32,15 @@ println(data.printSchema())
 // Printing the Top 5 Rows!
 println(data.show(5))
 
+
+//////////////////////////////////////////////////////////////////////////////
+data = data.withColumn("Avg Area House Age", data("Avg Area House Age").cast(DoubleType))
+println(data.printSchema())
+
+for (i <- data.select("Avg Area House Age")){
+  println(List(i)[0], i.getClass)
+}
+/*
 // Selecting the required features
 val features = data.drop("Price")
 
@@ -45,3 +57,4 @@ val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("Feat
 
 
 val AssembledFeatures = VA.transform(features)
+*/
