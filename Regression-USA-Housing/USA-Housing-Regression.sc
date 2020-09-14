@@ -34,12 +34,15 @@ println(data.show(5))
 
 
 //////////////////////////////////////////////////////////////////////////////
-data = data.withColumn("Avg Area House Age", data("Avg Area House Age").cast(DoubleType))
-println(data.printSchema())
+data = data.withColumn("Avg Area House Age",
+  data("Avg Area House Age").cast(DoubleType)).withColumn("Avg Area Income",
+  data("Avg Area Income").cast(DoubleType))
 
-for (i <- data.select("Avg Area House Age")){
-  println(List(i)[0], i.getClass)
-}
+println(data.printSchema())
+println(data.show(5))
+println("Rows Present now are: ", data.count())
+
+
 /*
 // Selecting the required features
 val features = data.drop("Price")
