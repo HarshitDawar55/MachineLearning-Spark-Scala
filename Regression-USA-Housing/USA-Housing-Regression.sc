@@ -24,3 +24,6 @@ val features = data.drop("Price")
 // Printing the columns in the features dataset
 println(features.columns.mkString("Array(", ", ", ")"))
 
+// Selecting the Price Label Independently
+val labels = data.select("Price")
+println(labels.show(5))
