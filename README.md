@@ -1,9 +1,9 @@
 # MachineLearning-Spark-Scala
 ![SparkScalaML](Images/ScalaSparkML.png)
 
-:sparkles::fireworks::tada: Important points about this Repository!!!!! :tada::fireworks::sparkles:
+:sparkles::fireworks::tada: **Important points about this Repository!!!!!** :tada::fireworks::sparkles:
 
-####This Repository contains multiple well-defined Machine Learning projects in Apache Spark using Native Supported Language Scala!
+#### This Repository contains multiple well-defined Machine Learning projects in Apache Spark using Native Supported Language Scala!
 #### Code is present in the form of Scala Worksheets in this Repository!
 
 # Brief about Scala & why to choose Scala!
