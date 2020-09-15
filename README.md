@@ -16,4 +16,13 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * Highly scalable & capable of writing the complex codes efficiently.
 
- 
+# Brief about Apache Spark & why to choose it!
+* One of the most demanded Big Data Tool in the industry.
+
+* Provides complete flexibility to the user to perform almost all the data science tasks due to the multiple tools and languages support.
+
+* The Fastest tool to perform the task because it used In-Memory Computation Approach.
+
+* Provides SQL, Machine Learning, Visualization & Hive support to the user.
+
+* Supports multiple languages like Java, R, Scala, & Python. 
