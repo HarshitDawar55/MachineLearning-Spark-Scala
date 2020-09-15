@@ -66,6 +66,7 @@ println(labels.show(5))
 //////////////////////////////////////////////////////////////////////////////
 // Converting the features into Vector for Processing
 val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("Features")
+val AssembledFeatures = VA.transform(data).select("Price", "Features")
 
-val AssembledFeatures = VA.transform(features)
 println(AssembledFeatures.show(5))
+
