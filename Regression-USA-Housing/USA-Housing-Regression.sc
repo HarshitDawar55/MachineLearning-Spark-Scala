@@ -79,5 +79,12 @@ val lr = new LinearRegression()
 // Fitting the Model with the data
 val lrModel = lr.fit(AssembledFeatures)
 
+val trainingSummary = lrModel.summary
+
 // Displaying the Summary of the Model
-println(lrModel.summary)
+println(s"Predictions: ${trainingSummary.predictions.show(5, truncate = false)}" +
+  "\n" + s"Difference in outputs  ${trainingSummary.residuals.show(5)}" + "\n" +
+  s"Mean Squared Error: ${trainingSummary.meanSquaredError}" + "\n" +
+  s"Mean Absolute Error: ${trainingSummary.meanAbsoluteError}" + "\n" +
+  s"Root Mean Squared Error: ${trainingSummary.rootMeanSquaredError}" + "\n" +
+  s"Number of Iterations: ${trainingSummary.totalIterations}")
