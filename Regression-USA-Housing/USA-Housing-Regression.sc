@@ -60,14 +60,14 @@ val features = data.drop("Price")
 // Printing the columns in the features dataset
 println(features.columns.mkString("Array(", ", ", ")"))
 
-// Selecting the Price Label Independently
-val labels = data.select("Price")
-println(labels.show(5))
+// Changing the name of the Price column to 'label' for Ml Model Working
+data = data.withColumnRenamed("Price", "label")
+println(data.show(5))
 
 //////////////////////////////////////////////////////////////////////////////
 // Converting the features into Vector for Processing
-val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("Features")
-val AssembledFeatures = VA.transform(data).select("Price", "Features")
+val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("features")
+val AssembledFeatures = VA.transform(data).select("label", "features")
 
 println(AssembledFeatures.show(5))
 
@@ -78,3 +78,6 @@ val lr = new LinearRegression()
 
 // Fitting the Model with the data
 val lrModel = lr.fit(AssembledFeatures)
+
+// Displaying the Summary of the Model
+println(lrModel.summary)
