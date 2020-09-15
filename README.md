@@ -36,7 +36,7 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * It has the support for multiple machine learning algorithm categories like Regression, Clustering, Classification, Dimensionality Reduction, etc.
 
-* Dataframe & Dataset support is provided by Spark for the Internal Processing
+* Dataframe & Dataset support has been provided by Spark for the Internal Processing
  
 # License for this Repository!
 **To check out the License for this Repository [Click Here!](LICENSE)**   
