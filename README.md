@@ -27,11 +27,16 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * Supports multiple languages like Java, R, Scala, & Python.
 
+* It works on lazy evaluation which makes it very efficient for the big tasks.
+
+* It creates physical & Logical plans for the task execution, to read more about it [Visit Here!](https://medium.com/analytics-vidhya/how-spark-executes-the-code-written-in-structured-api-dataframes-datasets-and-sql-c344335740ef)
+
 # Apache Spark Machine Learning Support!
 * Apache Spark has a machine learning library dedicated for the machine learning tasks, it is very elegant & easy to use.
 
 * It has the support for multiple machine learning algorithm categories like Regression, Clustering, Classification, Dimensionality Reduction, etc.
- 
+
+* Dataframe & Dataset support is provided by Spark for the Internal Processing
  
 # License for this Repository!
 **To check out the License [Click Here!](LICENSE)**   
