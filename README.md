@@ -23,6 +23,9 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * The Fastest tool to perform the task because it used In-Memory Computation Approach.
 
-* Provides SQL, Machine Learning, Visualization & Hive support to the user.
+* Provides SQL, Machine Learning, Visualization, Streaming & Hive support to the user.
 
-* Supports multiple languages like Java, R, Scala, & Python. 
+* Supports multiple languages like Java, R, Scala, & Python.
+
+# Spark Machine Learning Support!
+ 
