@@ -14,4 +14,6 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * It is the native language for Apache Spark.
 
-*  
+* Highly scalable & capable of writing the complex codes efficiently.
+
+ 
