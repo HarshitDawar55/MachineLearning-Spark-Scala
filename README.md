@@ -27,5 +27,7 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * Supports multiple languages like Java, R, Scala, & Python.
 
-# Spark Machine Learning Support!
- 
+# Apache Spark Machine Learning Support!
+* Apache Spark has a machine learning library dedicated for the machine learning tasks, it is very elegant & easy to use.
+* It has the support for multiple machine learning algorithm categories like Regression, Clustering, Classification, Dimensionality Reduction, etc.
+  
