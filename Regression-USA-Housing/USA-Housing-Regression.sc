@@ -82,9 +82,10 @@ val lrModel = lr.fit(AssembledFeatures)
 val trainingSummary = lrModel.summary
 
 // Displaying the Summary of the Model
-println(s"Predictions: ${trainingSummary.predictions.show(5, truncate = false)}" +
-  "\n" + s"Difference in outputs  ${trainingSummary.residuals.show(5)}" + "\n" +
+println(trainingSummary.predictions.show(5, truncate = false) +
+  "\n" + trainingSummary.residuals.show(5) + "\n" +
   s"Mean Squared Error: ${trainingSummary.meanSquaredError}" + "\n" +
   s"Mean Absolute Error: ${trainingSummary.meanAbsoluteError}" + "\n" +
   s"Root Mean Squared Error: ${trainingSummary.rootMeanSquaredError}" + "\n" +
-  s"Number of Iterations: ${trainingSummary.totalIterations}")
+  s"Number of Iterations: ${trainingSummary.totalIterations}" + "\n" +
+  s"Objective History: ${trainingSummary.objectiveHistory.toList}")
