@@ -1,6 +1,5 @@
-![SparkScalaML](Images/ScalaSparkML.png)
-
 # MachineLearning-Spark-Scala
+![SparkScalaML](Images/ScalaSparkML.png)
 
 :sparkles::fireworks::tada: Important points about this Repository!!!!! :tada::fireworks::sparkles:
 
