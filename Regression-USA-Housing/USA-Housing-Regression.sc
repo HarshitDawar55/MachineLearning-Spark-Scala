@@ -3,6 +3,7 @@
 import org.apache.spark.sql.SparkSession
 import org.apache.log4j._
 import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.sql.types.DoubleType
 
 Logger.getLogger("org").setLevel(Level.ERROR)
@@ -70,3 +71,10 @@ val AssembledFeatures = VA.transform(data).select("Price", "Features")
 
 println(AssembledFeatures.show(5))
 
+
+//////////////////////////////////////////////////////////////////////////////
+// Creating the Linear Regression Model
+val lr = new LinearRegression()
+
+// Fitting the Model with the data
+val lrModel = lr.fit(AssembledFeatures)
