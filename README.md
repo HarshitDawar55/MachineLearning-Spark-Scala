@@ -1,4 +1,4 @@
-
+![SparkScalaML](Images/ScalaSparkML.png)
 
 # MachineLearning-Spark-Scala
 
