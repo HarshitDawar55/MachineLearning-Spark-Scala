@@ -3,7 +3,8 @@
 
 :sparkles::fireworks::tada: Important points about this Repository!!!!! :tada::fireworks::sparkles:
 
-This Repository contains Machine Learning projects in Apache Spark using Native Supported Language Scala!
+####This Repository contains multiple well-defined Machine Learning projects in Apache Spark using Native Supported Language Scala!
+#### Code is present in the form of Scala Worksheets in this Repository!
 
 # Brief about Scala & why to choose Scala!
 * It is the most rapidly growing programming language.
@@ -36,7 +37,9 @@ This Repository contains Machine Learning projects in Apache Spark using Native 
 
 * It has the support for multiple machine learning algorithm categories like Regression, Clustering, Classification, Dimensionality Reduction, etc.
 
-* Dataframe & Dataset support has been provided by Spark for the Internal Processing
+* Dataframe & Dataset support has been provided by Spark for the Internal Processing. 
+
+* Machine Learning Library of Spark: *org.apache.spark.ml*; Through this Library, Apache Spark provides the support for the Machine Learning capabilities.
  
 # License for this Repository!
 **To check out the License for this Repository [Click Here!](LICENSE)**   
