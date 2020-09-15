@@ -68,3 +68,4 @@ println(labels.show(5))
 val VA = new VectorAssembler().setInputCols(features.columns).setOutputCol("Features")
 
 val AssembledFeatures = VA.transform(features)
+println(AssembledFeatures.show(5))
