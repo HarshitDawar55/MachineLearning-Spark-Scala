@@ -43,10 +43,23 @@ data = data.withColumnRenamed("Yearly Amount Spent", "label")
 
 val VA = new VectorAssembler().setInputCols(
   Array("Avg Session Length", "Time on App", "Time on Website", "Length of Membership")).setOutputCol("features")
-var AssembledFeatures = VA.transform(data).select("features", "label")
+val AssembledFeatures = VA.transform(data).select("features", "label")
 
 println(AssembledFeatures.show(5, truncate = false) + "\n" + AssembledFeatures.printSchema())
 
+////////////////////////////////////////////
+//// Creating Linear Regression Model ///////////
+/////////////////////////////////////////
+
 val lr = new LinearRegression()
 
-//lr.fit
+val trainedModel = lr.fit(AssembledFeatures).summary
+
+// Displaying the Summary of the Model
+println(trainedModel.predictions.show(5, truncate = false) +
+  "\n" + trainedModel.residuals.show(5) + "\n" +
+  s"Mean Squared Error: ${trainedModel.meanSquaredError}" + "\n" +
+  s"Mean Absolute Error: ${trainedModel.meanAbsoluteError}" + "\n" +
+  s"Root Mean Squared Error: ${trainedModel.rootMeanSquaredError}" + "\n" +
+  s"Number of Iterations: ${trainedModel.totalIterations}" + "\n" +
+  s"Objective History: ${trainedModel.objectiveHistory.toList}")
