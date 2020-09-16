@@ -55,7 +55,9 @@ val lr = new LinearRegression()
 
 val trainedModel = lr.fit(AssembledFeatures).summary
 
-// Displaying the Summary of the Model
+////////////////////////////////////////////
+//// Displaying the Model Summary ///////////
+/////////////////////////////////////////
 println(trainedModel.predictions.show(5, truncate = false) +
   "\n" + trainedModel.residuals.show(5) + "\n" +
   s"Mean Squared Error: ${trainedModel.meanSquaredError}" + "\n" +
