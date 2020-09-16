@@ -28,3 +28,11 @@ println(data.show(5))
 println("Number of rows Initially: ",data.count())
 data = data.na.drop()
 println("Number of rows After Removing the Null Values: ",data.count())
+println(data.show(5))
+
+// Separating Features & Labels
+val features = data.select("Avg Session Length", "Time on App", "Time on Website", "Length of Membership")
+println(features.printSchema() + "\n" + features.show(5))
+
+val labels = data.select("Yearly Amount Spent")
+println(labels.printSchema() + "\n" + labels.show(5))
