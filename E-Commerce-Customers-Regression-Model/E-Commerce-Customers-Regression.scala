@@ -20,3 +20,6 @@ var data = spark.read.option("header", "true").option("inferSchema",
 
 // Printing the Schema of the Project
 println(data.printSchema())
+
+// Printing few rows from the Dataset
+println(data.show(5))
