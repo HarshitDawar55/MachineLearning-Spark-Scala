@@ -24,6 +24,10 @@ println(data.printSchema())
 // Printing few rows from the Dataset
 println(data.show(5))
 
+////////////////////////////////////////////
+//// Data Preprocessing ///////////
+/////////////////////////////////////////
+
 // Printing the number of records before cleaning & after cleaning
 println("Number of rows Initially: ",data.count())
 data = data.na.drop()
@@ -36,3 +40,7 @@ println(features.printSchema() + "\n" + features.show(5))
 
 val labels = data.select("Yearly Amount Spent")
 println(labels.printSchema() + "\n" + labels.show(5))
+
+////////////////////////////////////////////
+//// Linear Regression Model Building Starts ///////////
+/////////////////////////////////////////
