@@ -23,3 +23,8 @@ println(data.printSchema())
 
 // Printing few rows from the Dataset
 println(data.show(5))
+
+// Printing the number of records before cleaning & after cleaning
+println("Number of rows Initially: ",data.count())
+data = data.na.drop()
+println("Number of rows After Removing the Null Values: ",data.count())
